@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.4",
+  "configuration_state": "providers_selected_credentials_not_configured",
+  "tenant_ref": "current_authorized_tenant",
+  "active_route_preset": "balanced",
+  "asset_policy": {
+    "mode": "competition_strict",
+    "generated_assets_count_as_ima": false,
+    "allow_product_redraw": false,
+    "creative_permission_ref": null
+  },
+  "connections": [
+    {
+      "connection_ref": "deepseek",
+      "adapter": "text_openai_compatible",
+      "endpoint_ref": "official_deepseek_endpoint",
+      "secret_ref": "tenant_text_secret_ref",
+      "region_ref": "configured_region",
+      "data_policy": {
+        "allow_text_evidence": false,
+        "allow_image_payload": false,
+        "approval_ref": null
+      },
+      "state": "not_configured"
+    },
+    {
+      "connection_ref": "bailian",
+      "adapter": "native_dify_provider_or_verified_compatible",
+      "endpoint_ref": "actual_account_region_workspace_endpoint",
+      "secret_ref": "tenant_bailian_secret_ref",
+      "region_ref": "not_confirmed",
+      "data_policy": {
+        "allow_text_evidence": false,
+        "allow_image_payload": false,
+        "approval_ref": null
+      },
+      "state": "not_configured"
+    },
+    {
+      "connection_ref": "bailian_image",
+      "adapter": "bailian_image_generation_editing",
+      "endpoint_ref": "actual_account_region_workspace_image_endpoint",
+      "secret_ref": "tenant_bailian_secret_ref",
+      "region_ref": "configured_region",
+      "data_policy": {
+        "allow_text_evidence": false,
+        "allow_image_payload": false,
+        "approval_ref": null
+      },
+      "state": "not_configured"
+    }
+  ],
+  "profiles": [
+    {
+      "profile_id": "planner_text",
+      "connection_ref": "deepseek",
+      "model_id": "deepseek-flash",
+      "required_probe_capabilities": [
+        "text",
+        "structured_json"
+      ],
+      "probe_state": "not_run"
+    },
+    {
+      "profile_id": "writer_text",
+      "connection_ref": "deepseek",
+      "model_id": "deepseek-flash",
+      "required_probe_capabilities": [
+        "text",
+        "structured_json"
+      ],
+      "probe_state": "not_run"
+    },
+    {
+      "profile_id": "review_text",
+      "connection_ref": "deepseek",
+      "model_id": "deepseek-v4-pro",
+      "required_probe_capabilities": [
+        "text",
+        "structured_json"
+      ],
+      "probe_state": "not_run"
+    },
+    {
+      "profile_id": "review_vision",
+      "connection_ref": "bailian",
+      "model_id": "qwen3-vl-plus",
+      "required_probe_capabilities": [
+        "text",
+        "structured_json",
+        "vision_input"
+      ],
+      "probe_state": "not_run"
+    },
+    {
+      "profile_id": "creative_image",
+      "connection_ref": "bailian_image",
+      "model_id": "qwen-image-3.0-pro",
+      "required_probe_capabilities": [
+        "image_generate",
+        "image_edit"
+      ],
+      "probe_state": "not_run"
+    }
+  ],
+  "policies": [
+    {
+      "node": "intent_parse",
+      "primary": "planner_text",
+      "skill": "intent_parse@1.4"
+    },
+    {
+      "node": "fact_extract",
+      "primary": "planner_text",
+      "skill": "fact_extract@1.4"
+    },
+    {
+      "node": "platform_strategy",
+      "platform": "xiaohongshu",
+      "primary": "writer_text",
+      "skill": "platform_strategy@1.4",
+      "platform_rules": "xiaohongshu@1.1"
+    },
+    {
+      "node": "platform_strategy",
+      "platform": "*",
+      "primary": "planner_text",
+      "skill": "platform_strategy@1.4"
+    },
+    {
+      "node": "article_write",
+      "primary": "writer_text",
+      "fallbacks": [
+        "planner_text"
+      ],
+      "required_capabilities": [
+        "text",
+        "structured_json"
+      ],
+      "skill": "article_write@1.4"
+    },
+    {
+      "node": "poster_copy",
+      "primary": "writer_text",
+      "fallbacks": [
+        "planner_text"
+      ],
+      "required_capabilities": [
+        "text",
+        "structured_json"
+      ],
+      "skill": "poster_copy@1.4"
+    },
+    {
+      "node": "visual_layout",
+      "primary": "review_vision",
+      "skill": "visual_layout@1.4"
+    },
+    {
+      "node": "fact_compliance_review",
+      "primary": "review_text",
+      "skill": "fact_compliance_review@1.4",
+      "distinct_from_active_nodes": [
+        "article_write",
+        "poster_copy",
+        "quote_explain",
+        "sales_demo"
+      ],
+      "compare_effective_model_identity": true,
+      "on_independence_unavailable": "manual_gate",
+      "future_optional": "review_vision"
+    },
+    {
+      "node": "visual_review",
+      "primary": "review_vision",
+      "skill": "visual_review@1.4",
+      "requires_image_payload_permission": true
+    },
+    {
+      "node": "image_generate",
+      "primary": "creative_image",
+      "skill": "creative_brief@1.4",
+      "enabled": false,
+      "allowed_asset_policies": [
+        "concept_preview",
+        "creative_authorized"
+      ]
+    },
+    {
+      "node": "quote_explain",
+      "primary": "writer_text",
+      "skill": "quote_explain@1.4",
+      "input_policy": "authorized_customer_quote_summary_only",
+      "price_calculation_allowed": false
+    },
+    {
+      "node": "sales_demo",
+      "primary": "writer_text",
+      "skill": "sales_demo@1.4",
+      "input_policy": "authorized_customer_quote_summary_and_verified_product_facts",
+      "price_calculation_allowed": false
+    }
+  ],
+  "limits": {
+    "max_concurrent_nodes_per_task": 3,
+    "max_repair_rounds": 2,
+    "max_fallbacks_per_node": 1,
+    "budget_currency": "CNY",
+    "max_task_cost": null,
+    "paid_execution_requires_budget": false,
+    "budget_authorization": "user_confirmed_no_cap_2026-10-18",
+    "record_usage_and_cost": true
+  },
+  "platform_binding": {
+    "default": "dify_chatflow",
+    "configuration_document_only": false,
+    "actual_platform_export_available": false,
+    "model_selection": "native_provider_settings_and_per_llm_node"
+  },
+  "selected_initial_providers": {
+    "text": {
+      "provider": "DeepSeek",
+      "user_has_api": true,
+      "candidate_model": "deepseek-flash",
+      "account_model_probe": "NOT_RUN",
+      "official_base_url": "https://api.deepseek.com",
+      "candidate_review_model": "deepseek-v4-pro",
+      "review_plan": "distinct_text_model_until_bailian_available"
+    },
+    "review_and_vision": {
+      "provider": "Alibaba Cloud Model Studio",
+      "recommended_model": "qwen3-vl-plus",
+      "account_access": "user_has_no_api_permission",
+      "native_dify_provider_id": null,
+      "base_url_policy": "use_actual_account_region_workspace_endpoint"
+    },
+    "creative_image": {
+      "enabled": false,
+      "selected_model": "qwen-image-3.0-pro",
+      "selection_source": "user_confirmed",
+      "role": "image_generation_and_editing",
+      "not_a_visual_review_model": true,
+      "reason": "competition_strict uses verified source images; creative preview is a separate optional mode"
+    }
+  },
+  "source_modes": [
+    "local_snapshot",
+    "ima_live",
+    "hybrid_verified"
+  ]
+}

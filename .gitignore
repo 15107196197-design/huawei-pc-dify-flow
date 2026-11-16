@@ -1,0 +1,26 @@
+# Private research includes the user supplied handbook and rendered pages.
+research/
+output/
+tmp/
+.env
+.env.*
+!.env.example
+secrets/
+data/
+*.key
+*.pem
+__pycache__/
+.venv/
+node_modules/
+dist/
+.DS_Store
+
+# Local Dify upstream, runtime state and credentials.
+.local/
+
+# Bundles: apps/*.candidate.yml ARE published (download-and-import samples).
+# Only build noise is ignored here.
+apps/manifest.json
+apps/model-bindings.example.json
+apps/prompts/
+apps-intro/

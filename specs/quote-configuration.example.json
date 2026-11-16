@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.4",
+  "configuration_state": "example_not_ready_for_real_quotes",
+  "platform_default": "dify_chatflow",
+  "objective": "min_customer_payable",
+  "objective_metric": "min_cash_due_now_given_verified_customer_resources",
+  "objective_metric_version": "1.0",
+  "objective_confirmation_source": "user_confirmed",
+  "payment_semantics": {
+    "customer_payable_minor_is": "cash_due_now_minor",
+    "formatted_customer_payable_is": "server_formatted_cash_due_now",
+    "merchandise_total_minor_is": "goods_settlement_after_verified_sales_adjustments_before_payment_credits",
+    "mandatory_fees_minor_is": "all_verified_required_shipping_tax_and_service_fees_not_already_in_merchandise_total",
+    "order_total_before_payment_minor_is": "merchandise_total_minor_plus_mandatory_fees_minor",
+    "credits_applied_minor_is": "verified_non_cash_payment_credits_applied_once",
+    "cash_due_now_minor_is": "order_total_before_payment_minor_minus_credits_applied_minor",
+    "missing_fee_is_not_zero": true,
+    "allow_future_rewards_as_current_resources": false,
+    "allow_estimated_recovery_value_as_final_payment_credit": false,
+    "allow_recovery_value_and_issued_voucher_double_deduction": false,
+    "points_ledger_classification": "follow_verified_rule_sales_adjustment_or_payment_credit_never_both",
+    "allow_unrequested_deposit_or_financing_to_lower_cash_objective": false
+  },
+  "customer_resource_policy": {
+    "snapshot_ref": null,
+    "verification_state": "unverified",
+    "same_verified_customer_resources_across_sku_alternatives": true,
+    "unknown_balance_or_eligibility_is_not_unlimited_or_zero": true,
+    "allowed_redemption_scope_requires_customer_confirmation": true,
+    "compare_counterfactual_skus_without_consuming_resources": true,
+    "record_old_asset_value_points_consumption_and_remaining_balances_separately": true,
+    "equal_cash_alternatives_require_resource_impact_disclosure": true,
+    "allow_automatic_irreversible_redemption_or_trade_in": false
+  },
+  "script_type": "customer_product_and_quote",
+  "formal_delivery_policy": {
+    "marketing_requires_quote": true,
+    "marketing_requires_customer_purchase_plan": true,
+    "full_package_requires_quote": true,
+    "full_package_requires_customer_purchase_plan": true,
+    "purchase_plan_field": "customer_quote_summary.customer_purchase_plan",
+    "formal_task_kinds": [
+      "marketing",
+      "full_package"
+    ],
+    "default_quote_required": true,
+    "default_purchase_plan_required": true,
+    "require_four_level_applicability_and_customer_safe_evidence": true,
+    "require_same_sku_legal_combination_comparison": true,
+    "require_recommendation_set_coverage_and_comparability": true,
+    "require_optimal_cash_resource_usage_conditions_and_validity": true,
+    "comparison_sentences_and_amounts_are_server_generated": true,
+    "allow_fabricated_alternatives_when_only_one_legal_combination": false,
+    "product_intro_without_quote_counts_as_full_package": false
+  },
+  "four_levels_spec": {
+    "name_source": "user_confirmed",
+    "rules_source": "ima_evidence_required",
+    "source_status": "pending-source-verification",
+    "semantic_kind": null,
+    "levels": [
+      {
+        "level_id": "base_price",
+        "display_name": "基准价",
+        "rule_refs": [],
+        "rule_verification_state": "unverified"
+      },
+      {
+        "level_id": "platform_discount",
+        "display_name": "平台优惠",
+        "rule_refs": [],
+        "rule_verification_state": "unverified"
+      },
+      {
+        "level_id": "identity_benefit",
+        "display_name": "身份权益",
+        "rule_refs": [],
+        "rule_verification_state": "unverified"
+      },
+      {
+        "level_id": "trade_in_national_subsidy",
+        "display_name": "换新国补",
+        "rule_refs": [],
+        "rule_verification_state": "unverified"
+      }
+    ],
+    "display_order_is_calculation_order": false,
+    "calculation_order_ref": null,
+    "stack_policy_ref": null,
+    "source_refs": [],
+    "approved_version": null
+  },
+  "pricing_rule_set": {
+    "publication_status": "unverified",
+    "rule_refs": [],
+    "candidate_manifest_ref": null,
+    "arithmetic_policy_ref": null
+  },
+  "real_quote_enabled": false,
+  "disclosure_policy": {
+    "allow_p4_raw_to_cloud_workflow": false,
+    "allow_p4_raw_to_llm": false,
+    "allow_client_quote_to_cloud_workflow": false,
+    "allow_client_quote_to_llm": false,
+    "allow_quote_in_public_content": false,
+    "approval_refs": []
+  },
+  "evaluation_plan": {
+    "state": "not_run",
+    "suggested_answerable_cases": 200,
+    "minimum_fully_correct_on_200": 191,
+    "timeouts_and_refusals_count_as_failures": true,
+    "critical_error_tolerance": 0
+  },
+  "workflow_order": [
+    "resolve_sales_platform_user_scenario",
+    "evidence_based_suitability_screening",
+    "exact_quote_per_suitable_sku",
+    "compare_validated_sku_minima_with_coverage",
+    "explain_authorized_product_and_quote"
+  ],
+  "recommendation_policy": {
+    "facts_source": "ima_evidence_required",
+    "required_context": [
+      "sales_platform",
+      "customer_need",
+      "use_scenario",
+      "authorized_store_scope"
+    ],
+    "content_channel_is_not_sales_platform": true,
+    "suitability_before_price": true,
+    "allow_unsuitable_low_price_replacement": false,
+    "unknown_suitability_requires_evidence": true,
+    "recommendation_set_ref": null,
+    "recommendation_set_version": null
+  },
+  "comparison_policy": {
+    "scope": "evidence_supported_suitable_recommendation_set",
+    "objective_per_sku": "min_customer_payable",
+    "objective_metric_per_sku": "min_cash_due_now_given_verified_customer_resources",
+    "require_same_verified_customer_resource_snapshot": true,
+    "quote_each_sku_independently": true,
+    "require_valid_optimal_and_current_validation_per_sku": true,
+    "require_comparable_currency_quantity_purchase_scope": true,
+    "complete_set_lowest_requires_full_quote_coverage": true,
+    "partial_results_require_explicit_coverage_and_limitations": true,
+    "allow_cross_product_minimum_as_same_configuration_claim": false,
+    "allow_global_or_all_web_lowest_claim": false,
+    "comparison_manifest_ref": null,
+    "customer_comparison_requires_destination_authorization": true
+  },
+  "customer_quote_summary": null
+}

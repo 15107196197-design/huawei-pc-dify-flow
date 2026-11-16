@@ -1,0 +1,682 @@
+{
+  "$comment": "Public candidate mapping only; not a runtime QuoteResult or approved pricing rule set. No real product baseline, private pricing, customer data or credentials.",
+  "schema_version": "0.1-candidate",
+  "candidate_status": "pending_kb_ingestion",
+  "created_at": "2026-10-18T16:39:04+08:00",
+  "real_quote_enabled": false,
+  "objective": "min_customer_payable",
+  "four_levels_spec_ref": null,
+  "four_level_names": [
+    {
+      "level_id": "base_price",
+      "display_name": "基准价",
+      "name_source": "user_confirmed"
+    },
+    {
+      "level_id": "platform_discount",
+      "display_name": "平台优惠",
+      "name_source": "user_confirmed"
+    },
+    {
+      "level_id": "identity_benefit",
+      "display_name": "身份权益",
+      "name_source": "user_confirmed"
+    },
+    {
+      "level_id": "trade_in_national_subsidy",
+      "display_name": "换新国补",
+      "name_source": "user_confirmed"
+    }
+  ],
+  "rules_source_policy": {
+    "official_web_observations_are_candidates": true,
+    "competition_source": "ima_evidence_required",
+    "source_kb_written": false,
+    "publish_to_source_kb_requires_separate_authorized_ingestion": true,
+    "public_page_access_is_not_activity_eligibility": true,
+    "same_display_name_is_not_same_sku": true
+  },
+  "external_sources": [
+    {
+      "external_source_ref": "W02",
+      "official_url": "https://www.vmall.com/help/faq-4363.html",
+      "access_recorded_at": "2026-10-18T16:39:04+08:00",
+      "access_status": "public_text_read",
+      "publication_time": null,
+      "valid_from": null,
+      "valid_until": null,
+      "ima_source_ref": null,
+      "ingestion_status": "pending_kb_ingestion"
+    },
+    {
+      "external_source_ref": "W03",
+      "official_url": "https://www.vmall.com/help/faq-4369.html",
+      "access_recorded_at": "2026-10-18T16:39:04+08:00",
+      "access_status": "public_text_read",
+      "publication_time": null,
+      "valid_from": null,
+      "valid_until": null,
+      "ima_source_ref": null,
+      "ingestion_status": "pending_kb_ingestion"
+    },
+    {
+      "external_source_ref": "W04",
+      "official_url": "https://www.vmall.com/help/faq-11822.html",
+      "access_recorded_at": "2026-10-18T16:39:04+08:00",
+      "access_status": "public_text_read",
+      "publication_time": null,
+      "valid_from": null,
+      "valid_until": null,
+      "ima_source_ref": null,
+      "ingestion_status": "pending_kb_ingestion"
+    },
+    {
+      "external_source_ref": "W05",
+      "official_url": "https://www.vmall.com/help/faq-4385.html",
+      "access_recorded_at": "2026-10-18T16:39:04+08:00",
+      "access_status": "public_text_read",
+      "publication_time": null,
+      "valid_from": null,
+      "valid_until": null,
+      "ima_source_ref": null,
+      "ingestion_status": "pending_kb_ingestion"
+    },
+    {
+      "external_source_ref": "W06",
+      "official_url": "https://www.vmall.com/help/faq-7923.html",
+      "access_recorded_at": "2026-10-18T16:39:04+08:00",
+      "access_status": "public_text_read",
+      "publication_time": null,
+      "valid_from": null,
+      "valid_until": null,
+      "ima_source_ref": null,
+      "ingestion_status": "pending_kb_ingestion"
+    },
+    {
+      "external_source_ref": "W07",
+      "official_url": "https://consumer.huawei.com/cn/support/content/zh-cn15888493/",
+      "access_recorded_at": "2026-10-18T16:39:04+08:00",
+      "access_status": "public_text_read",
+      "publication_time": null,
+      "valid_from": null,
+      "valid_until": null,
+      "ima_source_ref": null,
+      "ingestion_status": "pending_kb_ingestion"
+    },
+    {
+      "external_source_ref": "W08",
+      "official_url": "https://consumer.huawei.com/cn/harmonyos-computer/matebook-14-harmonyos-version/",
+      "access_recorded_at": "2026-10-18T16:39:04+08:00",
+      "access_status": "reference_price_text_read_not_sku_transaction_price",
+      "publication_time": null,
+      "valid_from": null,
+      "valid_until": null,
+      "ima_source_ref": null,
+      "ingestion_status": "pending_kb_ingestion"
+    },
+    {
+      "external_source_ref": "W09",
+      "official_url": "https://www.vmall.com/portal/activity/index.html?isShowLayout=false&pn=educationcenterpc",
+      "access_recorded_at": "2026-10-18T16:39:04+08:00",
+      "access_status": "dynamic_page_no_rule_text",
+      "publication_time": null,
+      "valid_from": null,
+      "valid_until": null,
+      "ima_source_ref": null,
+      "ingestion_status": "pending_kb_ingestion"
+    },
+    {
+      "external_source_ref": "W10",
+      "official_url": "https://www.vmall.com/help/faq-16720.html",
+      "access_recorded_at": "2026-10-18T16:39:04+08:00",
+      "access_status": "redirected_to_home_no_rule_text",
+      "publication_time": null,
+      "valid_from": null,
+      "valid_until": null,
+      "ima_source_ref": null,
+      "ingestion_status": "pending_kb_ingestion"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_ref": "C_BASE",
+      "level_id": "base_price",
+      "kind": "sku_baseline_required",
+      "candidate_status": "pending_kb_ingestion",
+      "rule_verification_state": "unverified",
+      "enabled": false,
+      "source_refs": [
+        "W08"
+      ],
+      "ima_rule_ref": null,
+      "approved_rule_version": null,
+      "scope": {
+        "product_ref": null,
+        "sku_ref": null,
+        "configuration_ref": null,
+        "sales_platform": null,
+        "store_ref": null,
+        "merchant_type": null,
+        "region": null,
+        "currency": null,
+        "quantity": null,
+        "valid_from": null,
+        "valid_until": null,
+        "rule_timezone": null
+      },
+      "eligibility": {
+        "state": "unknown",
+        "required_conditions": null,
+        "verified_eligibility_refs": []
+      },
+      "arithmetic": {
+        "amount_minor": null,
+        "rate_decimal": null,
+        "calculation_base_ref": null,
+        "calculation_order": null,
+        "rounding_mode": null,
+        "rounding_scale": null,
+        "cap_minor": null,
+        "floor_minor": null,
+        "fee_refs": null
+      },
+      "stacking": {
+        "allowed_with_rule_refs": null,
+        "exclusive_with_rule_refs": null,
+        "applies_before_rule_refs": null,
+        "applies_after_rule_refs": null
+      },
+      "official_general_observations": {
+        "reference_starting_price_is_not_sku_baseline": true,
+        "reference_price_amount_intentionally_omitted": true
+      },
+      "unresolved_items": [
+        "exact_sku_and_selected_configuration",
+        "price_semantics_before_or_after_promotions",
+        "current_channel_store_time",
+        "actual_price_and_source_validity"
+      ]
+    },
+    {
+      "candidate_ref": "C_COUPON",
+      "level_id": "platform_discount",
+      "kind": "ordinary_plus_stackable_coupon",
+      "candidate_status": "pending_kb_ingestion",
+      "rule_verification_state": "unverified",
+      "enabled": false,
+      "source_refs": [
+        "W02"
+      ],
+      "ima_rule_ref": null,
+      "approved_rule_version": null,
+      "scope": {
+        "product_ref": null,
+        "sku_ref": null,
+        "configuration_ref": null,
+        "sales_platform": null,
+        "store_ref": null,
+        "merchant_type": null,
+        "region": null,
+        "currency": null,
+        "quantity": null,
+        "valid_from": null,
+        "valid_until": null,
+        "rule_timezone": null
+      },
+      "eligibility": {
+        "state": "unknown",
+        "required_conditions": null,
+        "verified_eligibility_refs": []
+      },
+      "arithmetic": {
+        "amount_minor": null,
+        "rate_decimal": null,
+        "calculation_base_ref": null,
+        "calculation_order": null,
+        "rounding_mode": null,
+        "rounding_scale": null,
+        "cap_minor": null,
+        "floor_minor": null,
+        "fee_refs": null
+      },
+      "stacking": {
+        "allowed_with_rule_refs": null,
+        "exclusive_with_rule_refs": null,
+        "applies_before_rule_refs": null,
+        "applies_after_rule_refs": null
+      },
+      "official_general_observations": {
+        "scope": "general_help_not_account_or_sku_confirmation",
+        "maximum_ordinary_coupons_per_line_item": 1,
+        "maximum_stackable_coupons_per_line_item": 1,
+        "maximum_total_coupons_per_line_item": 2,
+        "coupon_pays_shipping": false,
+        "self_operated_goods_coupon_points_combination_described": true,
+        "offer_and_coupon_specific_terms_required": true
+      },
+      "unresolved_items": [
+        "owned_coupon_refs_and_balances",
+        "eligible_sku_and_offer_exclusions",
+        "threshold_base_and_caps",
+        "current_offer_terms_and_expiry",
+        "cross_education_trade_in_subsidy_stacking",
+        "coupon_calculation_order_and_rounding"
+      ]
+    },
+    {
+      "candidate_ref": "C_IDENTITY",
+      "level_id": "identity_benefit",
+      "kind": "mainland_pc_education_or_other_identity",
+      "candidate_status": "pending_kb_ingestion",
+      "rule_verification_state": "unverified",
+      "enabled": false,
+      "source_refs": [
+        "W09",
+        "W10"
+      ],
+      "ima_rule_ref": null,
+      "approved_rule_version": null,
+      "scope": {
+        "product_ref": null,
+        "sku_ref": null,
+        "configuration_ref": null,
+        "sales_platform": null,
+        "store_ref": null,
+        "merchant_type": null,
+        "region": null,
+        "currency": null,
+        "quantity": null,
+        "valid_from": null,
+        "valid_until": null,
+        "rule_timezone": null
+      },
+      "eligibility": {
+        "state": "unknown",
+        "required_conditions": null,
+        "verified_eligibility_refs": []
+      },
+      "arithmetic": {
+        "amount_minor": null,
+        "rate_decimal": null,
+        "calculation_base_ref": null,
+        "calculation_order": null,
+        "rounding_mode": null,
+        "rounding_scale": null,
+        "cap_minor": null,
+        "floor_minor": null,
+        "fee_refs": null
+      },
+      "stacking": {
+        "allowed_with_rule_refs": null,
+        "exclusive_with_rule_refs": null,
+        "applies_before_rule_refs": null,
+        "applies_after_rule_refs": null
+      },
+      "official_general_observations": {
+        "official_entry_located": true,
+        "current_pc_terms_observed": false,
+        "other_region_or_digital_subscription_rules_reused": false
+      },
+      "unresolved_items": [
+        "mainland_pc_eligible_identity_and_current_certification",
+        "eligible_products_and_per_person_limits",
+        "amount_or_rate_and_base",
+        "validity_region_and_channel",
+        "cross_level_stacking_and_order"
+      ]
+    },
+    {
+      "candidate_ref": "C_POINTS",
+      "level_id": "identity_benefit",
+      "kind": "membership_points_redemption",
+      "candidate_status": "pending_kb_ingestion",
+      "rule_verification_state": "unverified",
+      "enabled": false,
+      "source_refs": [
+        "W03",
+        "W04",
+        "W02"
+      ],
+      "ima_rule_ref": null,
+      "approved_rule_version": null,
+      "scope": {
+        "product_ref": null,
+        "sku_ref": null,
+        "configuration_ref": null,
+        "sales_platform": null,
+        "store_ref": null,
+        "merchant_type": null,
+        "region": null,
+        "currency": null,
+        "quantity": null,
+        "valid_from": null,
+        "valid_until": null,
+        "rule_timezone": null
+      },
+      "eligibility": {
+        "state": "unknown",
+        "required_conditions": null,
+        "verified_eligibility_refs": []
+      },
+      "arithmetic": {
+        "amount_minor": null,
+        "rate_decimal": null,
+        "calculation_base_ref": null,
+        "calculation_order": null,
+        "rounding_mode": null,
+        "rounding_scale": null,
+        "cap_minor": null,
+        "floor_minor": null,
+        "fee_refs": null
+      },
+      "stacking": {
+        "allowed_with_rule_refs": null,
+        "exclusive_with_rule_refs": null,
+        "applies_before_rule_refs": null,
+        "applies_after_rule_refs": null
+      },
+      "official_general_observations": {
+        "scope": "general_help_subject_to_product_checkout_adjustment",
+        "points_per_currency_unit": 100,
+        "currency_unit": "CNY",
+        "minimum_points_increment": 1,
+        "general_redemption_cap_rate_decimal": "0.30",
+        "cap_base_excludes_shipping": true,
+        "cap_base_excludes_coupon_and_immediate_or_threshold_discount_amounts": true,
+        "future_order_reward_points_spendable_in_same_order": false,
+        "live_balance_and_sku_cap_verified": false
+      },
+      "unresolved_items": [
+        "actual_points_balance_and_validity",
+        "eligible_product_confirmed_cap",
+        "exact_rounding_and_allocation",
+        "national_subsidy_relative_base_and_order",
+        "whether_user_fourth_level_classification_includes_this_program"
+      ]
+    },
+    {
+      "candidate_ref": "C_TRADEIN_VALUE",
+      "level_id": "trade_in_national_subsidy",
+      "kind": "old_asset_recovery_payment_instrument",
+      "candidate_status": "pending_kb_ingestion",
+      "rule_verification_state": "unverified",
+      "enabled": false,
+      "source_refs": [
+        "W05",
+        "W06",
+        "W07"
+      ],
+      "ima_rule_ref": null,
+      "approved_rule_version": null,
+      "scope": {
+        "product_ref": null,
+        "sku_ref": null,
+        "configuration_ref": null,
+        "sales_platform": null,
+        "store_ref": null,
+        "merchant_type": null,
+        "region": null,
+        "currency": null,
+        "quantity": null,
+        "valid_from": null,
+        "valid_until": null,
+        "rule_timezone": null
+      },
+      "eligibility": {
+        "state": "unknown",
+        "required_conditions": null,
+        "verified_eligibility_refs": []
+      },
+      "arithmetic": {
+        "amount_minor": null,
+        "rate_decimal": null,
+        "calculation_base_ref": null,
+        "calculation_order": null,
+        "rounding_mode": null,
+        "rounding_scale": null,
+        "cap_minor": null,
+        "floor_minor": null,
+        "fee_refs": null,
+        "recovery_estimate_minor": null,
+        "recovery_inspected_final_minor": null
+      },
+      "stacking": {
+        "allowed_with_rule_refs": null,
+        "exclusive_with_rule_refs": null,
+        "applies_before_rule_refs": null,
+        "applies_after_rule_refs": null
+      },
+      "official_general_observations": {
+        "preliminary_estimate_is_not_inspected_final_value": true,
+        "online_trade_in_issues_vmall_voucher_after_inspection": true,
+        "recovery_voucher_is_payment_instrument_not_additional_discount": true,
+        "multiple_vouchers_and_remaining_balance_described": true,
+        "online_and_store_rules_not_interchangeable": true
+      },
+      "unresolved_items": [
+        "old_device_and_condition_with_authorization",
+        "final_inspected_value_and_voucher_status",
+        "account_balance_and_payment_channel_restrictions",
+        "additional_purchase_bonus_separate_from_recovery_value",
+        "objective_cash_outlay_versus_goods_payable_semantics"
+      ]
+    },
+    {
+      "candidate_ref": "C_TRADEIN_BONUS",
+      "level_id": "trade_in_national_subsidy",
+      "kind": "additional_trade_in_purchase_bonus",
+      "candidate_status": "pending_kb_ingestion",
+      "rule_verification_state": "unverified",
+      "enabled": false,
+      "source_refs": [],
+      "ima_rule_ref": null,
+      "approved_rule_version": null,
+      "scope": {
+        "product_ref": null,
+        "sku_ref": null,
+        "configuration_ref": null,
+        "sales_platform": null,
+        "store_ref": null,
+        "merchant_type": null,
+        "region": null,
+        "currency": null,
+        "quantity": null,
+        "valid_from": null,
+        "valid_until": null,
+        "rule_timezone": null
+      },
+      "eligibility": {
+        "state": "unknown",
+        "required_conditions": null,
+        "verified_eligibility_refs": []
+      },
+      "arithmetic": {
+        "amount_minor": null,
+        "rate_decimal": null,
+        "calculation_base_ref": null,
+        "calculation_order": null,
+        "rounding_mode": null,
+        "rounding_scale": null,
+        "cap_minor": null,
+        "floor_minor": null,
+        "fee_refs": null
+      },
+      "stacking": {
+        "allowed_with_rule_refs": null,
+        "exclusive_with_rule_refs": null,
+        "applies_before_rule_refs": null,
+        "applies_after_rule_refs": null
+      },
+      "official_general_observations": {
+        "current_pc_bonus_terms_observed": false,
+        "recoverable_asset_value_is_not_bonus": true
+      },
+      "unresolved_items": [
+        "current_official_activity_terms",
+        "eligible_old_and_new_device_and_sku",
+        "bonus_amount_qualification_validity",
+        "whether_old_device_required",
+        "stacking_base_order_rounding_and_budget"
+      ]
+    },
+    {
+      "candidate_ref": "C_NATIONAL",
+      "level_id": "trade_in_national_subsidy",
+      "kind": "national_subsidy",
+      "candidate_status": "pending_kb_ingestion",
+      "rule_verification_state": "unverified",
+      "enabled": false,
+      "source_refs": [],
+      "ima_rule_ref": null,
+      "approved_rule_version": null,
+      "scope": {
+        "product_ref": null,
+        "sku_ref": null,
+        "configuration_ref": null,
+        "sales_platform": null,
+        "store_ref": null,
+        "merchant_type": null,
+        "region": null,
+        "currency": null,
+        "quantity": null,
+        "valid_from": null,
+        "valid_until": null,
+        "rule_timezone": null
+      },
+      "eligibility": {
+        "state": "unknown",
+        "required_conditions": null,
+        "verified_eligibility_refs": []
+      },
+      "arithmetic": {
+        "amount_minor": null,
+        "rate_decimal": null,
+        "calculation_base_ref": null,
+        "calculation_order": null,
+        "rounding_mode": null,
+        "rounding_scale": null,
+        "cap_minor": null,
+        "floor_minor": null,
+        "fee_refs": null
+      },
+      "stacking": {
+        "allowed_with_rule_refs": null,
+        "exclusive_with_rule_refs": null,
+        "applies_before_rule_refs": null,
+        "applies_after_rule_refs": null
+      },
+      "official_general_observations": {
+        "current_pc_region_specific_official_terms_observed": false,
+        "guessed_rate_or_cap": false,
+        "old_device_requirement_assumed": false
+      },
+      "unresolved_items": [
+        "official_region_and_implementing_channel_terms",
+        "eligible_sku_and_customer_qualification",
+        "quota_and_budget_availability",
+        "rate_cap_and_calculation_base",
+        "coupon_education_points_and_trade_in_stacking",
+        "rounding_order_expiry_and_refund_policy"
+      ]
+    },
+    {
+      "candidate_ref": "C_FEES",
+      "level_id": null,
+      "kind": "shipping_and_other_fees",
+      "candidate_status": "pending_kb_ingestion",
+      "rule_verification_state": "unverified",
+      "enabled": false,
+      "source_refs": [
+        "W04",
+        "W02"
+      ],
+      "ima_rule_ref": null,
+      "approved_rule_version": null,
+      "scope": {
+        "product_ref": null,
+        "sku_ref": null,
+        "configuration_ref": null,
+        "sales_platform": null,
+        "store_ref": null,
+        "merchant_type": null,
+        "region": null,
+        "currency": null,
+        "quantity": null,
+        "valid_from": null,
+        "valid_until": null,
+        "rule_timezone": null
+      },
+      "eligibility": {
+        "state": "unknown",
+        "required_conditions": null,
+        "verified_eligibility_refs": []
+      },
+      "arithmetic": {
+        "amount_minor": null,
+        "rate_decimal": null,
+        "calculation_base_ref": null,
+        "calculation_order": null,
+        "rounding_mode": null,
+        "rounding_scale": null,
+        "cap_minor": null,
+        "floor_minor": null,
+        "fee_refs": null
+      },
+      "stacking": {
+        "allowed_with_rule_refs": null,
+        "exclusive_with_rule_refs": null,
+        "applies_before_rule_refs": null,
+        "applies_after_rule_refs": null
+      },
+      "official_general_observations": {
+        "shipping_can_depend_on_amount_after_discounts_and_redemptions": true,
+        "general_free_shipping_threshold_minor": 4800,
+        "currency_unit": "CNY",
+        "shipping_coupon_payment_allowed": false,
+        "live_shipping_fee_verified": false
+      },
+      "unresolved_items": [
+        "actual_region_delivery_and_order_type",
+        "shipping_fee_when_threshold_not_met",
+        "tax_and_optional_or_mandatory_service_fees",
+        "fee_discount_and_subsidy_eligibility"
+      ]
+    }
+  ],
+  "cross_level_relationships": {
+    "display_order_is_calculation_order": false,
+    "complete_calculation_order": null,
+    "all_four_stackable": null,
+    "education_coupon_national_subsidy_stack_policy": null,
+    "trade_in_national_subsidy_relationship": null,
+    "pairwise_stacking_matrix": null,
+    "candidate_domain_complete": false
+  },
+  "ledger_separation": {
+    "goods_payable_minor": null,
+    "payment_voucher_minor": null,
+    "cash_outlay_minor": null,
+    "old_asset_value_minor": null,
+    "additional_trade_in_bonus_minor": null,
+    "national_subsidy_minor": null,
+    "future_reward_points_value_minor": null,
+    "allow_double_count_recovery_value_and_payment_voucher": false,
+    "objective_metric_version": null
+  },
+  "publication_gate": {
+    "pending_source_refs": [],
+    "ima_ingestion_verified": false,
+    "all_required_terms_complete": false,
+    "authorized_rule_review_ref": null,
+    "published_rule_set_ref": null,
+    "exact_solver_and_independent_replay_status": "NOT_RUN",
+    "customer_quote_summary": null
+  },
+  "unknown_policy": {
+    "missing_is_not_zero": true,
+    "unobserved_rule_is_not_no_activity": true,
+    "no_fabricated_rates_caps_or_order": true,
+    "no_search_index_price_as_live_sku_price": true,
+    "no_other_country_or_digital_service_education_substitution": true
+  }
+}

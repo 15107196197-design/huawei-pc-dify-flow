@@ -1,0 +1,25 @@
+# Reviewed local bridge exception for Dify 1.17.1. Not applied automatically.
+# Keep the upstream common and sandbox includes. The generated broad private-IP
+# allowlist is deliberately not included: only this destination/port/path tuple
+# may reach the Mac knowledge bridge through this proxy.
+include /etc/squid/dify_common.conf
+
+acl allowed_domains dstdomain .marketplace.dify.ai
+acl huawei_bridge_dst dst 192.168.5.2/32
+acl huawei_bridge_port port 8765
+acl huawei_bridge_method method POST
+acl huawei_bridge_path urlpath_regex ^/v1/(contexts/resolve|kb/evidence|quotes/solve)$
+
+http_port ${HTTP_PORT}
+
+http_access deny !Safe_ports
+http_access deny CONNECT !SSL_ports
+http_access allow localhost manager
+http_access deny manager
+include /etc/squid/dify_sandbox_proxy.conf
+http_access allow client_localnet huawei_bridge_dst huawei_bridge_port huawei_bridge_method huawei_bridge_path
+http_access deny to_private_networks
+http_access allow allowed_domains
+http_access allow client_localnet
+http_access allow localhost
+http_access deny all

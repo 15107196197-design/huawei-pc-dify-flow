@@ -1,0 +1,510 @@
+{
+  "format_version": "1",
+  "created_at": "2026-11-16T09:54:44.853285+00:00",
+  "scope": "sanitized_source_only_no_user_knowledge_or_runtime_credentials",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 456,
+      "sha256": "a420d9f73f1e0236e368a1c3d316f610e59ca41e3a6a48c6de3737de56f3596a",
+      "mode": "0644"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11339,
+      "sha256": "e1aa390aeccddd1282a52f9fae674a54b8664cb0f1af9451587edae2d5287545",
+      "mode": "0644"
+    },
+    {
+      "path": "README.md",
+      "bytes": 10883,
+      "sha256": "84c612d977e12cd3c21e916bb4f7eb6fdab3e7242618c0bd7472dfaf2f950544",
+      "mode": "0644"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 1673,
+      "sha256": "7601af5c8a10fdec0c88399970cc7a978f827298cd3505022b5de57b61ea57c6",
+      "mode": "0644"
+    },
+    {
+      "path": "QUICKSTART.md",
+      "bytes": 6034,
+      "sha256": "a97cf2a979ce6854df80a6c199c09c1a8fe495f144934e1b710016df897b1155",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/README.md",
+      "bytes": 4487,
+      "sha256": "ef189ca19561955497c7f97076152a31bf9802fb18d6d0d943133ce1eadabb9c",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/full-workflow.candidate.yml",
+      "bytes": 1614474,
+      "sha256": "a04e754f03742a5125ff53db5cc586ee0861f9adc29e9e570050a96b02f267b6",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/product-intro.candidate.yml",
+      "bytes": 96185,
+      "sha256": "35a139cb02893d7e936b31ddbe3c55df4ff3010731884ac15278b016a4c763c6",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/product-intro-revise.candidate.yml",
+      "bytes": 168911,
+      "sha256": "cf0466b18e9f23a101615c6d0ca7c940a681184122120ea16ae25ae0ba27dc65",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/stage-model.candidate.yml",
+      "bytes": 131709,
+      "sha256": "445d49f3f9b699143ad0007e2e919839dcc7b849db075672394ce805145d6185",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/vision-probe.candidate.yml",
+      "bytes": 16885,
+      "sha256": "484b4c8752c414eefcfdfe8e1ced3d510caf2a5ee23b561eb12f0f4d25e10c6c",
+      "mode": "0644"
+    },
+    {
+      "path": ".github/workflows/offline-contracts.yml",
+      "bytes": 307,
+      "sha256": "0ea9949eb6b30c4e198d22de6a8c20b6fb93f2c8342dfab83f04f2688bffbcf2",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/acceptance-cases.csv",
+      "bytes": 70778,
+      "sha256": "5fea2c2b1c4b2b28d7e8001bb9dcf74a03c057ba05b7997be7a05c346e0e6a5c",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/agent-development-guide.md",
+      "bytes": 13940,
+      "sha256": "b81d8fc5be40dd3069b44dfc89a5e99d3c84d9c3a3495769fdcd68f5fac102ef",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/dify-local-deployment.md",
+      "bytes": 12565,
+      "sha256": "3d8af013c0ace438f3cde3261f85d1a676dca3c913662c01f094141daea2c827",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/dify-prompt-binding-guide.md",
+      "bytes": 6700,
+      "sha256": "687be2569961465e1fc2ed00c6895d9d3b914c4d7036c284d6d9b7f4aa2a79d5",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/HOW-TO-CONFIGURE.md",
+      "bytes": 14486,
+      "sha256": "b0b29fbfc8dce2ffbf170e3951d370a4df1c312556116a59f56b0fc1244ac5f1",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/knowledge-source-modes.md",
+      "bytes": 4166,
+      "sha256": "31d8b1536e1dd48683b55248a4edeafdff6c7361de482c31405c2ffc3f4fed92",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/local-bridge-network-plan.md",
+      "bytes": 6104,
+      "sha256": "5518ae1cd7312f3753fca8cabdb25815a7525c6658a435e74e9a7c756a99f925",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/local-knowledge-bridge.md",
+      "bytes": 20940,
+      "sha256": "6fe31cbffc45a7331b1d143c38040775a1bc9b5a11ebd1add1a3d760a0755e2f",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/modelscope-space-readme.md",
+      "bytes": 3536,
+      "sha256": "b71a45b87133e43ddc5b3d631ccdc336efc4b212de7b5e8a7c8a37c83720394d",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/multi-model-design.md",
+      "bytes": 21281,
+      "sha256": "da6e19b125cbae59c73fa0f42452e8f04275b6fdff64c3eeb7af7d6d3e138431",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/platform-workflow-build-guide.md",
+      "bytes": 60482,
+      "sha256": "bda3e2e50b1dbf6912a50fcdce638042a0a5caa3ee1a2a82f113e6371bb12191",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/prompt-design-notes.md",
+      "bytes": 3792,
+      "sha256": "4ea52bc810de7f292ed4ebb160cb631ae444a7e979b3848c5b9cecb63075426b",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/quote-optimization-design.md",
+      "bytes": 45064,
+      "sha256": "eb8acd400809f32ce33993828685dc80aa22a3658f92935ff2ca5a92dedb487c",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/requirements-design.md",
+      "bytes": 92342,
+      "sha256": "1e0bf899ed58ee19b64e7f8711e4b68927a162f81b9fd59bf7f9d57ca79b6902",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/sales-demo-script-design.md",
+      "bytes": 17320,
+      "sha256": "d5bf4386d434168c4316ab037637763d840b1f86b376050a4bd3f7ef21b77788",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/tooling-and-connectors.md",
+      "bytes": 10468,
+      "sha256": "36d4e065f758e8bddfbc39cf5ff37a4d3228e09f59d64eb7c69abd91540b2506",
+      "mode": "0644"
+    },
+    {
+      "path": "prompts/article-system.md",
+      "bytes": 26621,
+      "sha256": "3c7b5dcab63d4afd2bc770260dadd52bb98bdfd135c659c5881728a841a5fe58",
+      "mode": "0644"
+    },
+    {
+      "path": "prompts/layout-system.md",
+      "bytes": 12551,
+      "sha256": "d5fa39bddf97bf9442c84e982e788b713d3bc9edf778370e141a4766548a4797",
+      "mode": "0644"
+    },
+    {
+      "path": "prompts/platform-strategy-system.md",
+      "bytes": 12636,
+      "sha256": "35e9dbe426649fd8b60fd9f6943dee3a9dfe4c6ba7741a29cedc706bee8adb1a",
+      "mode": "0644"
+    },
+    {
+      "path": "prompts/poster-system.md",
+      "bytes": 22350,
+      "sha256": "d7f519277ca8a3cfb3c04266b85faf4d92998ebf98f16437198c295e2c4f2ddd",
+      "mode": "0644"
+    },
+    {
+      "path": "prompts/product-intro-system.md",
+      "bytes": 12739,
+      "sha256": "bc188c9e88e4bc23eb9700b7794bbcea6dd17f0de5f0075b343361be3b194726",
+      "mode": "0644"
+    },
+    {
+      "path": "prompts/quote-explain-system.md",
+      "bytes": 13113,
+      "sha256": "604529f256648a219439920f9c8e8438640ea1d7582cdfddea064eb3d9d3370d",
+      "mode": "0644"
+    },
+    {
+      "path": "prompts/review-system.md",
+      "bytes": 16130,
+      "sha256": "b5842dc50cccee85ca4fd95eded6bfa50b002a7e544029adc7766e66ba2d5dd4",
+      "mode": "0644"
+    },
+    {
+      "path": "prompts/sales-demo-system.md",
+      "bytes": 20832,
+      "sha256": "3343b9b49996cfbd4a861ec47423b94e00accb0aaa448e37281e94657e99f766",
+      "mode": "0644"
+    },
+    {
+      "path": "prompts/scene-parse-system.md",
+      "bytes": 7105,
+      "sha256": "ab4cb46911a9210fb0f92b0cef0aecb52f8f434fb53ea14613ccddbcb5ae13dd",
+      "mode": "0644"
+    },
+    {
+      "path": "prompts/visual-review-system.md",
+      "bytes": 11216,
+      "sha256": "ba503c3c5ea499d5918357e6f24f48b9b598c3baf22448ad85f24a55f83abdf5",
+      "mode": "0644"
+    },
+    {
+      "path": "specs/business-tool-contract.md",
+      "bytes": 30539,
+      "sha256": "7f531b1da12311c00a25a4ba5bb1bb6b18c492e05c3517ca4aafb58c2152e8de",
+      "mode": "0644"
+    },
+    {
+      "path": "specs/commerce-rule-candidate.example.json",
+      "bytes": 22039,
+      "sha256": "7b38783c5e14d8665bf066b714f967be1d5e483f746af971452e1c68507af500",
+      "mode": "0644"
+    },
+    {
+      "path": "specs/model-routing.example.json",
+      "bytes": 6998,
+      "sha256": "6412c146af8ad974e62adf13742cb92d210e0364f6a54ababbc059fa1bd33c10",
+      "mode": "0644"
+    },
+    {
+      "path": "specs/prompt-registry.json",
+      "bytes": 9232,
+      "sha256": "6f021c3bcccb2281d031ebb2b6c3cea905799a3f2eccc872ff7ab1fe4d516eb7",
+      "mode": "0644"
+    },
+    {
+      "path": "specs/quote-configuration.example.json",
+      "bytes": 6311,
+      "sha256": "4ee5299878e6f7105988fcefe9d1406048a58f46f7c5b0359d9b72577afd8464",
+      "mode": "0644"
+    },
+    {
+      "path": "services/__init__.py",
+      "bytes": 34,
+      "sha256": "e0172e5a4b307d7ed0cf10fda92eb7bbcb7e0015c8819c0470225e055f51f423",
+      "mode": "0644"
+    },
+    {
+      "path": "services/knowledge_bridge/__init__.py",
+      "bytes": 170,
+      "sha256": "dfcced7aa336fd1f0601471ca2c5acc2e44905c30d8f7921c10df8e6ec7cab2c",
+      "mode": "0644"
+    },
+    {
+      "path": "services/knowledge_bridge/__main__.py",
+      "bytes": 5494,
+      "sha256": "4ba2f39fb20dae6f7c3c162c7a1a4d3c683bdfd9cb178c7e7d468ea501740576",
+      "mode": "0644"
+    },
+    {
+      "path": "services/knowledge_bridge/bridge.py",
+      "bytes": 43805,
+      "sha256": "a6874a97e4605f2c9e44f4c74a049c3acf21f7ae2b3ff2ebdd4855602f7662cb",
+      "mode": "0644"
+    },
+    {
+      "path": "services/poster_renderer/__init__.py",
+      "bytes": 525,
+      "sha256": "f132c95f42d41e8aa43de3429ac6c6d7ec9a3e3c66f8a94ef01439fa32fafeb3",
+      "mode": "0644"
+    },
+    {
+      "path": "services/poster_renderer/renderer.py",
+      "bytes": 35860,
+      "sha256": "3fe95d22d4995c6df39aa0b31043283e9ada827d13f2339b6c65d0429fd0c73a",
+      "mode": "0644"
+    },
+    {
+      "path": "services/quote_engine/__init__.py",
+      "bytes": 525,
+      "sha256": "f34b4ef76cce4e806e1245ddf77aba03b20c68a340aef1db09b2df0ce47e6873",
+      "mode": "0644"
+    },
+    {
+      "path": "services/quote_engine/engine.py",
+      "bytes": 46685,
+      "sha256": "c4ac5a3dbdc2f2b29323cfeeb47d11895100f6c564d4c17d30e11eb2bbf499f1",
+      "mode": "0644"
+    },
+    {
+      "path": "services/image_provider/__init__.py",
+      "bytes": 455,
+      "sha256": "dcc13dfa29c327673b906e037f0c54002a8a62f60435738d62cf7d465c22abab",
+      "mode": "0644"
+    },
+    {
+      "path": "services/image_provider/qwen_image.py",
+      "bytes": 27463,
+      "sha256": "a497cf6a5b438bfcd4a28fa43c55a67c8d6956773cd636cea9706f8484f0f5c6",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/build_dify_bundle.py",
+      "bytes": 57616,
+      "sha256": "37b139ad1313e78c3f62e244b813e098f3e4a60355f82276069794a683dc6ab9",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/build_full_dify_bundle.py",
+      "bytes": 96367,
+      "sha256": "755ea348f3b8e7b33344e8938534b37f1804b02ed1f2bad0bfb01e40a7e82151",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/run_local_bridge.py",
+      "bytes": 3770,
+      "sha256": "37644003d5cfd03dc673b5bc9619f86dc5dc99a77128e5bf5b419a48c9746054",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/prepare_public_release.py",
+      "bytes": 17299,
+      "sha256": "e4dd9cf30cc99b0a3fdb400113d6080142ffddd9b595684902e170b58e62fee3",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/test_bridge_squid_policy.py",
+      "bytes": 2522,
+      "sha256": "f24ef809c1f1e5f20d989ce19cf8435820acf1d1004af239df356a59ef569936",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/test_dify_bundle.py",
+      "bytes": 41319,
+      "sha256": "3405341a758b3e2991ae34d6cf675e09b987b6ab5352f39139f3093610919d9a",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/test_full_dify_bundle.py",
+      "bytes": 72055,
+      "sha256": "ba918c43482b04090e79acdc1cafdaffcf1f88cb86c2697fa641a7e305674ccf",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/test_knowledge_bridge.py",
+      "bytes": 25347,
+      "sha256": "265aca140bea16303ecba1bedcd58754a3ce319ded0a695b56791c5eb0ba24dd",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/test_poster_renderer.py",
+      "bytes": 23520,
+      "sha256": "94abac1092de6db87fd8bab9cf0f4e95d86624107854f476c4dab3b36f261b20",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/test_quote_engine.py",
+      "bytes": 29887,
+      "sha256": "66b8107334ab4e2423de4c35384d364069f6e51de87362eda488b8df7e6983d2",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/test_qwen_image_provider.py",
+      "bytes": 22911,
+      "sha256": "d84de7db463f61ecf76e4c5cdecca2973e2c3c15f9c63eba0e9613861869b894",
+      "mode": "0644"
+    },
+    {
+      "path": "deploy/dify-local/README.md",
+      "bytes": 7318,
+      "sha256": "0f9f493d48f0cc3a0e44555c900009bb892f381328e905da4725d3383b11a80c",
+      "mode": "0644"
+    },
+    {
+      "path": "deploy/dify-local/dify-local.sh",
+      "bytes": 1697,
+      "sha256": "f2526698ed75833342e1c6eb456f91ccdf90d0790bd3fb799421700058440a76",
+      "mode": "0755"
+    },
+    {
+      "path": "deploy/dify-local/disk_guard.py",
+      "bytes": 1131,
+      "sha256": "e115f78a7eff4d64d0f9dcc3224b4da17dd3f35572551c51d31f1b323926b747",
+      "mode": "0644"
+    },
+    {
+      "path": "deploy/dify-local/docker-compose.override.yaml",
+      "bytes": 220,
+      "sha256": "4fcca5e83316782b7bd26ef3732fe9fffe26eee3897771cf056b7e84b101b689",
+      "mode": "0644"
+    },
+    {
+      "path": "deploy/dify-local/generate-bridge-squid.py",
+      "bytes": 2670,
+      "sha256": "bba22eaa0ad14b19b168cdfe65ef931056f0969e5530fecc36600d4c11fcda4d",
+      "mode": "0644"
+    },
+    {
+      "path": "deploy/dify-local/preflight.py",
+      "bytes": 1877,
+      "sha256": "700487169c4ad3ac083fe422d7c798ed5cdd1fafef52829dc4029035f585c639",
+      "mode": "0644"
+    },
+    {
+      "path": "deploy/dify-local/probe-bridge-network.py",
+      "bytes": 4855,
+      "sha256": "13e99492cbed274a5d9d4c0e774e7efc05273f95c2feb5e741611caa44b2495d",
+      "mode": "0644"
+    },
+    {
+      "path": "deploy/dify-local/squid-bridge.conf.template",
+      "bytes": 1040,
+      "sha256": "537f3ba675a7d5067c4f339440362b615c9d0e81c9f4bd1a527e4c16a70561ec",
+      "mode": "0644"
+    }
+  ],
+  "sanitized_files": [
+    {
+      "path": "README.md",
+      "changes": {
+        "public_boundary_note_added": 1
+      }
+    },
+    {
+      "path": "docs/agent-development-guide.md",
+      "changes": {
+        "local_app_id_removed": 4,
+        "unpublished_local_link_replaced": 1
+      }
+    },
+    {
+      "path": "docs/dify-local-deployment.md",
+      "changes": {
+        "unpublished_local_link_replaced": 6,
+        "local_app_id_removed": 1
+      }
+    },
+    {
+      "path": "docs/dify-prompt-binding-guide.md",
+      "changes": {
+        "local_app_id_removed": 2
+      }
+    },
+    {
+      "path": "docs/local-knowledge-bridge.md",
+      "changes": {
+        "local_app_id_removed": 4
+      }
+    },
+    {
+      "path": "docs/platform-workflow-build-guide.md",
+      "changes": {
+        "local_app_id_removed": 4
+      }
+    },
+    {
+      "path": "docs/quote-optimization-design.md",
+      "changes": {
+        "unpublished_local_link_replaced": 1
+      }
+    },
+    {
+      "path": "docs/requirements-design.md",
+      "changes": {
+        "unpublished_local_link_replaced": 1,
+        "private_kb_name_replaced": 1
+      }
+    },
+    {
+      "path": "deploy/dify-local/README.md",
+      "changes": {
+        "unpublished_local_link_replaced": 4
+      }
+    }
+  ],
+  "known_private_secret_matches": 0,
+  "excluded": [
+    ".local/",
+    "research/",
+    "submission/",
+    "workflows/",
+    "user knowledge sources and original media",
+    "runtime/import DSL and generated bundles",
+    "env/credentials/tokens/private keys",
+    "upstream/runtime/VM/dependency files",
+    "bytecode/cache/output files"
+  ]
+}
